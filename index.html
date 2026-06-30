@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAANI Overseas Services - Study in Australia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BAANI</span>
+                <span class="logo-subtext">Overseas Services</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-phone">
+                    <a href="tel:+919875961608" class="phone-link">
+                        <span class="phone-icon">📞</span>
+                        +91 98759 61608
+                    </a>
+                </li>
+                <li class="nav-cta">
+                    <button class="cta-button primary-btn">Book Free Counselling</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Video Background -->
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video">
+                <source src="https://videos.pexels.com/video-files/3373728/3373728-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <!-- Gold Particles -->
+        <div class="particles-container" id="particlesContainer"></div>
+
+        <!-- Left Side Content -->
+        <div class="hero-left">
+            <div class="book-stack">
+                <div class="book book-1"></div>
+                <div class="book book-2"></div>
+                <div class="book book-3"></div>
+            </div>
+            <div class="graduation-cap">🎓</div>
+            <div class="passport">✈️</div>
+            <div class="australia-icon">🦘</div>
+        </div>
+
+        <!-- Center Content -->
+        <div class="hero-center">
+            <div class="content-wrapper">
+                <h1 class="hero-title">
+                    Your Dream of Studying<br>
+                    <span class="highlight-gold">in Australia</span><br>
+                    Starts Here
+                </h1>
+                <p class="hero-subtitle">
+                    Personalized counselling for Australian universities, admissions, visas and career guidance.
+                </p>
+                <div class="cta-buttons">
+                    <button class="cta-button primary-btn">Book Free Counselling</button>
+                    <button class="cta-button secondary-btn">Contact Us</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="hero-right">
+            <div class="globe-container">
+                <div class="globe">
+                    <div class="globe-inner">
+                        🌍
+                    </div>
+                    <div class="globe-orbit"></div>
+                </div>
+                <div class="flight-path">
+                    <svg viewBox="0 0 200 200" class="flight-line">
+                        <path d="M 50 150 Q 100 50 150 50" stroke="#D4AF37" stroke-width="2" fill="none" stroke-dasharray="5,5">
+                            <animate attributeName="stroke-dashoffset" values="0;-10" dur="20s" repeatCount="indefinite"/>
+                        </path>
+                        <circle cx="50" cy="150" r="4" fill="#D4AF37"/>
+                        <circle cx="150" cy="50" r="4" fill="#D4AF37"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Students Guided</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Visa Success Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Personalized Guidance</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
