@@ -1,0 +1,506 @@
+/* ================================================
+   PART 4: CONTACT FORM + FOOTER STYLES
+   ================================================ */
+
+/* ================================================
+   CONTACT SECTION
+   ================================================ */
+
+.contact {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(21, 21, 21, 0.5) 0%, rgba(11, 11, 11, 0.7) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+/* ================================================
+   CONTACT FORM STYLES
+   ================================================ */
+
+.contact-form-wrapper {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input:focus {
+    outline: none;
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.form-input:valid {
+    border-color: rgba(76, 175, 80, 0.5);
+}
+
+.form-focus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    transition: width 0.3s ease;
+}
+
+.form-input:focus ~ .form-focus {
+    width: 100%;
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Poppins', sans-serif;
+}
+
+select.form-input {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23d4af37' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+select.form-input option {
+    background: #1a1a1a;
+    color: var(--white);
+}
+
+.form-submit {
+    padding: 16px 30px;
+    background: linear-gradient(135deg, var(--gold), #e6c65f);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.form-submit::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.form-submit:hover::before {
+    opacity: 1;
+}
+
+.form-submit:active {
+    transform: translateY(-1px);
+}
+
+.form-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(212, 175, 55, 0.8);
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* ================================================
+   CONTACT INFO STYLES
+   ================================================ */
+
+.contact-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-info-card {
+    padding: 30px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.info-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover .info-icon {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.info-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+.info-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================================================
+   FOOTER STYLES
+   ================================================ */
+
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, rgba(11, 11, 11, 0.9) 0%, rgba(21, 21, 21, 0.95) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 80px 40px 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-column {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 5px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.logo-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(212, 175, 55, 0.8);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.footer-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    background: var(--gold);
+    color: #000;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.social-icon {
+    font-size: 18px;
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-links a::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-bottom-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--gold);
+}
+
+.divider {
+    color: rgba(212, 175, 55, 0.3);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - PART 4
+   ================================================ */
+
+@media (max-width: 1200px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
+    .contact-wrapper {
+        gap: 30px;
+    }
+
+    .contact-info-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .footer {
+        padding: 40px 15px 25px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    .form-input {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .form-submit {
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+
+    .contact-info-card {
+        padding: 20px 15px;
+    }
+
+    .info-icon {
+        font-size: 40px;
+    }
+
+    .info-title {
+        font-size: 16px;
+    }
+
+    .info-text {
+        font-size: 13px;
+    }
+
+    .logo-text {
+        font-size: 26px;
+    }
+
+    .footer-title {
+        font-size: 14px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .footer-bottom-links a {
+        font-size: 11px;
+    }
+}
