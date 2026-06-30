@@ -1,0 +1,409 @@
+/* ================================================
+   PART 2: WHY CHOOSE BAANI + SERVICES STYLES
+   ================================================ */
+
+/* ================================================
+   WHY CHOOSE SECTION
+   ================================================ */
+
+.why-choose {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(11, 11, 11, 0.5) 0%, rgba(21, 21, 21, 0.3) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.why-card {
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.why-card:hover {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+.card-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.why-card:hover .card-icon {
+    transform: scale(1.2);
+    animation: none;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================================================
+   SERVICES SECTION
+   ================================================ */
+
+.services {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(21, 21, 21, 0.5) 0%, rgba(11, 11, 11, 0.7) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    padding: 40px;
+    background: rgba(21, 21, 21, 0.8);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgba(212, 175, 55, 0.3);
+    letter-spacing: 2px;
+}
+
+.service-icon {
+    font-size: 48px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(10deg) scale(1.15);
+    filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.3));
+}
+
+.service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.service-title::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.service-card:hover .service-title::before {
+    width: 50px;
+}
+
+.service-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-features li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(212, 175, 55, 0.9);
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.service-card:hover .service-features li {
+    transform: translateX(10px);
+    color: var(--gold);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - PART 2
+   ================================================ */
+
+@media (max-width: 1200px) {
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose {
+        padding: 60px 20px;
+    }
+
+    .services {
+        padding: 60px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .why-card {
+        padding: 30px 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .card-icon {
+        font-size: 48px;
+    }
+
+    .service-icon {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose {
+        padding: 40px 15px;
+    }
+
+    .services {
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .why-card {
+        padding: 20px 15px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-description {
+        font-size: 13px;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-description {
+        font-size: 12px;
+    }
+
+    .service-features li {
+        font-size: 12px;
+    }
+
+    .card-icon {
+        font-size: 40px;
+    }
+
+    .service-icon {
+        font-size: 32px;
+    }
+}
