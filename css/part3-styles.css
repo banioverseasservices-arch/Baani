@@ -1,0 +1,465 @@
+/* ================================================
+   PART 3: STUDY PROCESS + TESTIMONIALS + FAQ STYLES
+   ================================================ */
+
+/* ================================================
+   STUDY PROCESS SECTION
+   ================================================ */
+
+.study-process {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(11, 11, 11, 0.5) 0%, rgba(21, 21, 21, 0.3) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.process-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+}
+
+.timeline-marker {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-color: var(--gold);
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.marker-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.marker-icon {
+    font-size: 32px;
+    margin-top: -5px;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.timeline-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.timeline-duration {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+}
+
+.timeline-connector {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.1));
+    transform: translateX(-50%);
+}
+
+/* ================================================
+   TESTIMONIALS SECTION
+   ================================================ */
+
+.testimonials {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(21, 21, 21, 0.5) 0%, rgba(11, 11, 11, 0.7) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    padding: 40px;
+    background: rgba(21, 21, 21, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+    opacity: 1;
+}
+
+.testimonial-card:hover {
+    background: rgba(21, 21, 21, 0.95);
+    border-color: var(--gold);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+}
+
+.testimonial-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.student-avatar {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.student-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.student-location {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.testimonial-card:hover .star {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.testimonial-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-course {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(212, 175, 55, 0.8);
+    font-weight: 500;
+}
+
+/* ================================================
+   FAQ SECTION
+   ================================================ */
+
+.faq {
+    position: relative;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, rgba(11, 11, 11, 0.5) 0%, rgba(21, 21, 21, 0.3) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.faq-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover .faq-text {
+    color: var(--gold);
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: var(--gold);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: rgba(212, 175, 55, 0.02);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.faq-answer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - PART 3
+   ================================================ */
+
+@media (max-width: 1200px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .study-process {
+        padding: 60px 20px;
+    }
+
+    .testimonials {
+        padding: 60px 20px;
+    }
+
+    .faq {
+        padding: 60px 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .timeline-marker {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+    }
+
+    .marker-number {
+        font-size: 24px;
+    }
+
+    .marker-icon {
+        font-size: 24px;
+    }
+
+    .timeline-item {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .study-process {
+        padding: 40px 15px;
+    }
+
+    .testimonials {
+        padding: 40px 15px;
+    }
+
+    .faq {
+        padding: 40px 15px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+        padding: 25px 15px;
+    }
+
+    .faq-question {
+        padding: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 400px;
+        padding: 15px;
+    }
+
+    .faq-text {
+        font-size: 14px;
+    }
+
+    .testimonial-text {
+        font-size: 13px;
+    }
+}
