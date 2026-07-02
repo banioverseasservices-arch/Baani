@@ -1,0 +1,49 @@
+# General OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node modules (if using any build tools in future)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+dist/
+build/
+
+# IDE files
+.VSCode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific
+*.exe
+*.app
+*.dmg
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Dependencies
+.bundle/
+vendor/
+
+# Local environment
+.env
+.env.local
+
+# Generated files
+_site/
