@@ -1,0 +1,18 @@
+site:
+  title: BAANI Overseas Services
+  description: Professional Student Counselling for Your Overseas Education Journey
+  lang: en
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+
+# Social media links
+social:
+  - platform: email
+    url: mailto:info@baanioverseas.com
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
