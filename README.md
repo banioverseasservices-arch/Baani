@@ -1,150 +1,105 @@
-# BAANI Overseas Services - Premium Landing Page
+# BAANI Overseas Services
 
-A luxurious, animated landing page for BAANI Overseas Services featuring premium design, smooth animations, and interactive elements.
+A professional student counseling website for overseas education in Australia.
 
-## 🎨 Features - Part 1
+## 🎓 About
 
-### Navigation Bar
-- Fixed transparent glass navigation with blur effect
-- Logo with gold accents
-- Menu items with smooth hover animations
-- Phone number link: +91 98759 61608
-- "Book Free Counselling" CTA button
-- Mobile-responsive hamburger menu
+BAANI Overseas Services helps students fulfill their dream of studying in Australia through expert counselling, university selection, admission guidance, and complete support throughout the journey.
 
-### Hero Section
-- Cinematic video background with gradient overlay
-- Left side: Animated book stack, graduation cap, passport, and kangaroo
-- Center: Compelling headline with gold highlight and call-to-action buttons
-- Right side: Interactive 3D globe with flight path animation
-- Gold particles floating throughout
-- Smooth fade-in animations on load
+## 📋 Services
 
-### Statistics Section
-- Three stat cards showing key metrics:
-  - 500+ Students Guided
-  - 95% Visa Success Rate
-  - 100% Personalized Guidance
-- Shimmer effect on hover
-- Counter animations when scrolling into view
-- Responsive grid layout
+- **🎓 Student Counselling** - Personalized guidance based on your goals, academic profile, and career aspirations
+- **🏫 University Selection** - Find the right Australian university that matches your requirements and budget
+- **📝 Admission Assistance** - Complete application support including document preparation and submission
+- **🛂 Visa Guidance** - Professional visa documentation assistance and interview preparation
+- **📚 Course Selection** - Choose the best career pathway aligned with your interests and job market demands
+- **✈️ Pre Departure Support** - Travel arrangements, accommodation guidance, and settlement support for Australia
 
-### Design System
+## ✨ Features
 
-#### Color Palette
-- **Background**: #0B0B0B (Deep Black)
-- **Gold**: #D4AF37 (Premium Gold)
-- **White**: #FFFFFF
-- **Dark Grey**: #151515
-
-#### Typography
-- **Headings**: Playfair Display (serif)
-- **Body**: Poppins (sans-serif)
-
-### Animation Effects
-- ✨ Floating gold particles with parallax
-- 📚 Book stack floating animation
-- 🎓 Graduation cap bounce
-- ✈️ Passport floating
-- 🦘 Kangaroo hopping animation
-- 🌍 Rotating globe with orbit
-- ✈️ Flight path animation (India to Australia)
-- 🔄 Shimmer effects on stat cards
-- 🎬 Cinematic video background
-
-## 📁 Project Structure
-
-```
-Baani/
-├── index.html          # Main HTML structure
-├── css/
-│   └── styles.css     # Premium styles & responsive design
-├── js/
-│   └── main.js        # Animations & interactions
-└── README.md          # Documentation
-```
-
-## 🛠️ Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Advanced animations, flexbox, grid, backdrop-filter
-- **JavaScript**: GSAP for smooth animations
-- **Libraries**:
-  - GSAP 3.12.2 (GreenSock Animation Platform)
-  - Google Fonts (Playfair Display, Poppins)
+- ✅ Responsive design for mobile and desktop
+- ✅ Smooth scrolling navigation
+- ✅ Professional color scheme with gold accents
+- ✅ Interactive contact form with validation
+- ✅ Expandable FAQ section with 6 comprehensive questions
+- ✅ Contact information cards
+- ✅ Enhanced hover effects and transitions
+- ✅ Better Typography with emoji icons
+- ✅ Form submission feedback with success messages
 
 ## 🚀 Getting Started
 
-1. Clone the repository
-2. Open `index.html` in a modern web browser
-3. The page will automatically load with all animations
+Simply open `index.html` in your web browser to view the website locally.
 
-## 📱 Responsive Design
+### For GitHub Pages Deployment:
 
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (480px - 767px)
-- Mobile Small (<480px)
+1. Go to your repository settings
+2. Navigate to "Pages" section
+3. Set source to "main" branch
+4. Your site will be published at: `https://banioverseasservices-arch.github.io/Baani/`
 
-## ♿ Accessibility Features
+## 📱 Features Overview
 
-- Semantic HTML structure
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Color contrast compliance
-- Mobile-friendly touch targets
-
-## 📋 Next Steps - Coming Soon
-
-### Part 2: Why Choose BAANI + Services
-- Service cards with icons
-- Unique value propositions
-- Benefits section
-
-### Part 3: Study Process + Testimonials + FAQ
-- Step-by-step study process
-- Student testimonials
-- FAQ accordion
-
-### Part 4: Contact + Footer
-- Contact form
-- Contact information
-- Social media links
-- Footer
-
-### Part 5: Advanced Features
-- 3D Interactive Globe
-- Enhanced particle effects
+### Contact Form
+- Full name, email, phone, and message fields
 - Form validation
-- Integration with backend
+- Success message feedback
+- Auto-reset after submission
 
-## 🎨 Design Inspiration
+### FAQ Section
+- 6 expandable questions and answers
+- Smooth expand/collapse animation
+- Professional styling with gold accents
 
-Premium luxury landing page design with:
-- Dark, sophisticated background
-- Gold accents for premium feel
-- Smooth, cinematic animations
-- Interactive 3D elements
-- Professional typography
+### Responsive Design
+- Mobile-first approach
+- Works perfectly on all devices
+- Navigation adapts for smaller screens
 
 ## 📞 Contact Information
 
-- **Phone**: +91 98759 61608
-- **Service**: Australian Education Counselling
+- **Email:** info@baanioverseas.com
+- **Phone:** +91 XXXXXXXXXX
+- **WhatsApp:** +91 XXXXXXXXXX
 
-## 📄 License
+## 📝 File Structure
 
-© 2024 BAANI Overseas Services. All rights reserved.
+```
+Baani/
+├── index.html      # Main website
+└── README.md       # Documentation
+```
 
-## 👨‍💻 Developer Notes
+## 🎨 Color Scheme
 
-- All animations use GSAP for optimal performance
-- CSS custom properties for easy theme customization
-- Intersection Observer for performance-optimized scrolling
-- Mobile-first responsive design approach
-- Smooth scrolling behavior across all browsers
+- **Primary:** Black (#000)
+- **Accent:** Gold (#d4af37)
+- **Text:** Dark Gray (#222)
+- **Background:** White (#fff)
+
+## 🔧 Customization
+
+To customize the website:
+
+1. **Update Contact Information:**
+   - Replace phone numbers in the contact section
+   - Update office address
+   - Modify email if needed
+
+2. **Change Images:**
+   - Hero image URL: Update the background URL in `.hero` section
+   - About section image: Update `src` attribute in the about section
+
+3. **Modify Content:**
+   - Edit service descriptions
+   - Update FAQ questions and answers
+   - Change heading and paragraph text
+
+4. **Styling:**
+   - Modify colors by changing hex values (#d4af37 for gold, #000 for black)
+   - Adjust spacing in padding/margin values
+   - Update font sizes as needed
 
 ---
 
-**Version**: 1.0.0 (Part 1 Complete)
-**Last Updated**: 2024
+© 2026 BAANI Overseas Services. All Rights Reserved.
