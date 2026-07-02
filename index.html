@@ -1,129 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAANI Overseas Services - Study in Australia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAANI Overseas Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+header{
+background:#000;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+color:#d4af37;
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+transition:color 0.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+margin-top:60px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+padding:15px 35px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:all 0.3s;
+border:2px solid #d4af37;
+display:inline-block;
+cursor:pointer;
+}
+
+.btn:hover{
+background:transparent;
+color:#d4af37;
+}
+
+.btn-secondary{
+background:transparent;
+color:#d4af37;
+border:2px solid #d4af37;
+}
+
+.btn-secondary:hover{
+background:#d4af37;
+color:black;
+}
+
+section{
+padding:90px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#000;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
+border-top:4px solid #d4af37;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+details{
+margin-bottom:20px;
+padding:15px;
+background:#f5f5f5;
+border-radius:8px;
+border-left:4px solid #d4af37;
+cursor:pointer;
+}
+
+details summary{
+font-weight:600;
+}
+
+details[open]{
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.contact{
+background:#000;
+color:white;
+}
+
+.contact h2{
+color:#d4af37;
+}
+
+.contact-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.contact-info{
+background:#111;
+padding:20px;
+border-radius:8px;
+border-left:4px solid #d4af37;
+}
+
+.contact-info h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:8px;
+font-weight:500;
+}
+
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:5px;
+font-family:'Poppins',sans-serif;
+font-size:14px;
+}
+
+.form-group textarea{
+resize:vertical;
+min-height:120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+outline:none;
+border-color:#d4af37;
+box-shadow:0 0 5px rgba(212,175,55,0.3);
+}
+
+.form-container{
+max-width:600px;
+margin:auto;
+background:#111;
+padding:40px;
+border-radius:10px;
+margin-top:30px;
+}
+
+.success-message{
+display:none;
+background:#4caf50;
+color:white;
+padding:15px;
+border-radius:5px;
+margin-bottom:20px;
+text-align:center;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+header{
+padding:15px 5%;
+}
+
+.logo{
+font-size:20px;
+}
+
+.hero{
+margin-top:60px;
+height:70vh;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+nav a{
+margin-left:0;
+display:block;
+padding:10px 0;
+}
+
+section{
+padding:60px 5%;
+}
+
+.title{
+font-size:28px;
+margin-bottom:30px;
+}
+
+.form-container{
+padding:20px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">BAANI</span>
-                <span class="logo-subtext">Overseas Services</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-phone">
-                    <a href="tel:+919875961608" class="phone-link">
-                        <span class="phone-icon">📞</span>
-                        +91 98759 61608
-                    </a>
-                </li>
-                <li class="nav-cta">
-                    <button class="cta-button primary-btn">Book Free Counselling</button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <!-- Video Background -->
-        <div class="hero-background">
-            <video autoplay muted loop class="hero-video">
-                <source src="https://videos.pexels.com/video-files/3373728/3373728-uhd_2560_1440_30fps.mp4" type="video/mp4">
-            </video>
-            <div class="video-overlay"></div>
-        </div>
+<header>
 
-        <!-- Gold Particles -->
-        <div class="particles-container" id="particlesContainer"></div>
+<div class="logo">BAANI Overseas</div>
 
-        <!-- Left Side Content -->
-        <div class="hero-left">
-            <div class="book-stack">
-                <div class="book book-1"></div>
-                <div class="book book-2"></div>
-                <div class="book book-3"></div>
-            </div>
-            <div class="graduation-cap">🎓</div>
-            <div class="passport">✈️</div>
-            <div class="australia-icon">🦘</div>
-        </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#faq">FAQs</a>
+<a href="#contact">Contact</a>
+</nav>
 
-        <!-- Center Content -->
-        <div class="hero-center">
-            <div class="content-wrapper">
-                <h1 class="hero-title">
-                    Your Dream of Studying<br>
-                    <span class="highlight-gold">in Australia</span><br>
-                    Starts Here
-                </h1>
-                <p class="hero-subtitle">
-                    Personalized counselling for Australian universities, admissions, visas and career guidance.
-                </p>
-                <div class="cta-buttons">
-                    <button class="cta-button primary-btn">Book Free Counselling</button>
-                    <button class="cta-button secondary-btn">Contact Us</button>
-                </div>
-            </div>
-        </div>
+</header>
 
-        <!-- Right Side Content -->
-        <div class="hero-right">
-            <div class="globe-container">
-                <div class="globe">
-                    <div class="globe-inner">
-                        🌍
-                    </div>
-                    <div class="globe-orbit"></div>
-                </div>
-                <div class="flight-path">
-                    <svg viewBox="0 0 200 200" class="flight-line">
-                        <path d="M 50 150 Q 100 50 150 50" stroke="#D4AF37" stroke-width="2" fill="none" stroke-dasharray="5,5">
-                            <animate attributeName="stroke-dashoffset" values="0;-10" dur="20s" repeatCount="indefinite"/>
-                        </path>
-                        <circle cx="50" cy="150" r="4" fill="#D4AF37"/>
-                        <circle cx="150" cy="50" r="4" fill="#D4AF37"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero" id="home">
 
-    <!-- Statistics Section -->
-    <section class="statistics">
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Students Guided</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Visa Success Rate</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Personalized Guidance</div>
-            </div>
-        </div>
-    </section>
+<div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
+<h1>Study in Australia with Confidence</h1>
+
+<p>Professional Student Counselling for Your Overseas Education Journey.</p>
+
+<a href="#contact" class="btn">Book Free Counselling</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<div>
+
+<h3>BAANI Overseas Services</h3>
+
+<br>
+
+<p>
+We help students fulfill their dream of studying in Australia through expert counselling, university selection, admission guidance, and complete support throughout the journey. With years of experience and a proven track record, we ensure every student receives personalized attention and comprehensive guidance.
+</p>
+
+<br>
+
+<p><strong>Why Choose Us?</strong></p>
+<ul style="margin-left:20px; margin-top:10px;">
+<li>Expert counsellors with international experience</li>
+<li>Personalized career guidance</li>
+<li>Strong university partnerships</li>
+<li>Complete visa support</li>
+<li>Post-arrival assistance</li>
+</ul>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Students studying">
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎓 Student Counselling</h3>
+<p>Personalized guidance based on your goals, academic profile, and career aspirations.</p>
+</div>
+
+<div class="card">
+<h3>🏫 University Selection</h3>
+<p>Find the right Australian university that matches your requirements and budget.</p>
+</div>
+
+<div class="card">
+<h3>📝 Admission Assistance</h3>
+<p>Complete application support including document preparation and submission.</p>
+</div>
+
+<div class="card">
+<h3>🛂 Visa Guidance</h3>
+<p>Professional visa documentation assistance and interview preparation.</p>
+</div>
+
+<div class="card">
+<h3>📚 Course Selection</h3>
+<p>Choose the best career pathway aligned with your interests and job market demands.</p>
+</div>
+
+<div class="card">
+<h3>✈️ Pre Departure Support</h3>
+<p>Travel arrangements, accommodation guidance, and settlement support for Australia.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h2 class="title">FAQs</h2>
+
+<div class="faq">
+
+<details>
+
+<summary>Do you charge for counselling?</summary>
+
+<p>Our initial counselling session is free. We offer various service packages with transparent pricing. Contact us for details regarding specialized services.</p>
+
+</details>
+
+<details>
+
+<summary>Which Australian universities do you work with?</summary>
+
+<p>We help students apply to all major Australian institutions including Go8 universities, UTS, RMIT, and other prestigious universities across Australia.</p>
+
+</details>
+
+<details>
+
+<summary>Can you help with visas?</summary>
+
+<p>Yes, we provide complete visa guidance including document preparation, application assistance, and interview coaching to maximize your visa approval chances.</p>
+
+</details>
+
+<details>
+
+<summary>What is the typical timeline for university admission?</summary>
+
+<p>The process typically takes 2-4 months from initial consultation to admission letter. Visa processing usually takes 4-8 weeks. We'll provide a detailed timeline during your consultation.</p>
+
+</details>
+
+<details>
+
+<summary>Do you provide support after I reach Australia?</summary>
+
+<p>Absolutely! We provide post-arrival support including accommodation assistance, orientation, banking setup, and ongoing guidance throughout your studies.</p>
+
+</details>
+
+<details>
+
+<summary>What if my application gets rejected?</summary>
+
+<p>We provide comprehensive support if your application is rejected. We'll analyze the reason, suggest improvements, and help with reapplication to other universities.</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="form-container">
+
+<div class="success-message" id="successMessage">
+✓ Thank you! Your message has been sent successfully. We'll contact you soon.
+</div>
+
+<form id="contactForm">
+
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required>
+</div>
+
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div class="form-group">
+<label for="phone">Phone Number *</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+
+<div class="form-group">
+<label for="message">Your Message *</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+
+<button type="submit" class="btn">Send Message</button>
+
+</form>
+
+</div>
+
+<div class="contact-box">
+
+<div class="contact-info">
+
+<h3>Phone</h3>
+
+<p>+91 XXXXXXXXXX</p>
+
+</div>
+
+<div class="contact-info">
+
+<h3>WhatsApp</h3>
+
+<p>+91 XXXXXXXXXX</p>
+
+</div>
+
+<div class="contact-info">
+
+<h3>Email</h3>
+
+<p>info@baanioverseas.com</p>
+
+</div>
+
+<div class="contact-info">
+
+<h3>Office Location</h3>
+
+<p>Your Office Address</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+©️ 2026 BAANI Overseas Services. All Rights Reserved.
+
+</footer>
+
+<script>
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const message = document.getElementById('message').value;
+
+// Show success message
+document.getElementById('successMessage').style.display = 'block';
+
+// Reset form
+this.reset();
+
+// Hide success message after 5 seconds
+setTimeout(() => {
+document.getElementById('successMessage').style.display = 'none';
+}, 5000);
+
+// Log the form data (in production, send to backend)
+console.log({name, email, phone, message});
+
+});
+
+</script>
+
 </body>
 </html>
